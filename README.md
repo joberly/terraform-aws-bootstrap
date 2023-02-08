@@ -2,6 +2,10 @@
 
 Module to bootstrap the AWS Terraform environment for use with Spacelift
 
+## Helpful Links
+
+- [Obtaining the thumbprint of an OIDC provider](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html)
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
