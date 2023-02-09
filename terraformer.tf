@@ -64,8 +64,23 @@ data "aws_iam_policy_document" "terraformer_permissions_boundary" {
     sid    = "EnforcePermissionsBoundary"
     effect = "Allow"
     actions = [
+      "iam:AddUserToGroup",
+      "iam:AttachRolePolicy",
+      "iam:AttachUserPolicy",
       "iam:CreateRole",
       "iam:CreateUser",
+      "iam:DeleteRolePolicy",
+      "iam:DeleteUserPolicy",
+      "iam:DetachRolePolicy",
+      "iam:DetachUserPolicy",
+      "iam:PutRolePermissionsBoundary",
+      "iam:PutRolePolicy",
+      "iam:PutUserPermissionsBoundary",
+      "iam:PutUserPolicy",
+      "iam:UpdateAssumeRolePolicy",
+    ]
+    resources = [
+      "*",
     ]
     condition {
       test     = "StringEquals"
