@@ -1,7 +1,7 @@
 # Spacelift OIDC connection
 
 locals {
-  spacelift_thumbprint = replace(var.spacelift_thumbprint, ":", "")
+  spacelift_thumbprint = lower(replace(var.spacelift_thumbprint, ":", ""))
 }
 
 resource "aws_iam_openid_connect_provider" "joberly_app_spacelift_io" {
